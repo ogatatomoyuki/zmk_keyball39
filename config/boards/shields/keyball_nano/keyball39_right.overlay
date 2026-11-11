@@ -55,7 +55,9 @@
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio1 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         automouse-layer = <4>;
-	scroll-layers = <5>;
+	// NAV(1) を握っている間もボール＝スクロールにする（Charybdis無線と同じ操作系）。
+	// 5 は専用 SCROLL レイヤー（起動キーは未割当＝将来用）。
+	scroll-layers = <1 5>;
 	snipe-layers = <6>;
     };
 };
